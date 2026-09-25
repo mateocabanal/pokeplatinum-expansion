@@ -41,7 +41,7 @@ jobs:
 
       - name: Verify matching Rev 1 ROM
         run: |
-          actual="$(sha1sum build/pokeplatinum.us.nds | cut -d' ' -f1)"
+          actual="$(sha1sum "$BUILD/pokeplatinum.us.nds" | cut -d' ' -f1)"
           expected="0862ec35b24de5c7e2dcb88c9eea0873110d755c"
           echo "SHA-1: $actual"
           test "$actual" = "$expected"
